@@ -2,15 +2,19 @@ package ma.formations.msa.customerservice.web;
 
 import ma.formations.msa.customerservice.entities.Customer;
 import ma.formations.msa.customerservice.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class CustomerRestController {
+
+
     private CustomerRepository customerRepository;
 
-    public CustomerRestController(CustomerRepository customerRepository) {
+
+    public CustomerRestController( CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
     @GetMapping("/customers")
